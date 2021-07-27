@@ -6,9 +6,22 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: green;
 }
 
 header button {
+  background: red;
+}
+
+header button:hover {
+  background: orange;
+}
+
+header button::after {
+  content: "what Up";
+}
+
+.contact button {
   background: red;
 }
 /*# sourceMappingURL=style.css.map */
