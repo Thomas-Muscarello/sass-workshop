@@ -1,0 +1,33 @@
+// By having an underscore in the begining of the file name it allows SASS to know that the file is only a partial file and that it should not ne genterated into a CSS file.
+
+//Mixin is like a function in javascript. To create, you must start with a @mixin 
+//You can add custom parameters with these mixins as well. To do so you would create a variable within the mixin - $direction. Then set that variable as the value to whichever stle option you want seperate
+@mixin centerFlex($direction) {
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction
+}
+
+header{
+    //To use the mixin, you just need to use @include, and then call the mixin (); 
+    //Dont forget to pass in the value of the parameters you want as well
+    @include centerFlex(row);
+  
+    background: lightblue;
+    height: 20vh;
+    color: $textColor;
+    // You can also nest things within SASS
+    // the following would normally have been header button {}
+    button{
+        background: $primaryBtn;
+        //you can add hovers, focus, etc by adding an " &: "
+        &:hover{
+            background: orange;
+        }
+        &::after{
+            content: "what Up";
+        }
+    }
+}

@@ -1,28 +1,11 @@
-// Create A variable
-$primaryBtn: red;
-$textColor: green;
-//Creating a varibale allows you to change information easier
+//To import other modules you would do the following
+@import "./_variables";
+@import "./header";
 
-header{
-    background: lightblue;
-    display: flex;
-    justify-content: center;
-    color: $textColor;
-    // You can also nest things within SASS
-    // the following would normally have been header button {}
+
+.contact {
+    @include centerFlex(column);
     button{
         background: $primaryBtn;
-        //you can add hovers, focus, etc by adding an " &: "
-        &:hover{
-            background: orange;
-        }
-        &::after{
-            content: "what Up";
-        }
     }
-}
-
-
-.contact button {
-    background: $primaryBtn;
 }
