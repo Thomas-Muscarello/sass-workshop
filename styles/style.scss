@@ -4,8 +4,10 @@
 
 
 .contact {
-    @include centerFlex(column);
-    button{
-        background: $primaryBtn;
-    }
+    //You can give inheritence from items by using extensions.
+    //to give an extension, just use @extend
+
+   @extend header;
+   // You can still override some style if you want to change only certain things.
+   background: yellow;
 }
